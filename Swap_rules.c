@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Swap_rules.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afantune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:53:44 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 11:46:38 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:36:20 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	sa(t_list **stack_a)
 {
 	if (swap(stack_a) == -1)
 		return (-1);
-	printf("sa\n");
+	write(1, "sa\n", 3);
 	return (0);
 }
 
@@ -42,7 +42,7 @@ int	sb(t_list **stack_b)
 {
 	if (swap(stack_b) == -1)
 		return (-1);
-	printf("sb\n");
+	write(1, "sb\n", 3);
 	return (0);
 }
 
@@ -52,6 +52,6 @@ int	ss(t_list **stack_a, t_list **stack_b)
 		return (-1);
 	swap(stack_a);
 	swap(stack_b);
-	printf("ss\n");
+	write(1, "ss\n", 3);
 	return (0);
 }

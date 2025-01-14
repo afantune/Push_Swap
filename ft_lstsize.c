@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afantune <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:07:44 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/18 13:26:16 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:39:41 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,30 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-	t_list	*list;
-	t_list	*current;
-	t_list	*next;
-	int	size;
-
-	list = NULL;
-	ft_lstadd_front(&list, ft_lstnew("Node 1"));
-	ft_lstadd_front(&list, ft_lstnew("Node 2"));
-	ft_lstadd_front(&list, ft_lstnew("Node 3"));
-
-	size = ft_lstsize(list);
-	printf("Size of the list: %d\n", size);
-
-	current = list;
-	while (current != NULL)
-	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
-	return (0);
-}*/

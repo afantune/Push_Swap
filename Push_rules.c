@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:44:59 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/18 13:30:47 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:33:57 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	pa(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_a, stack_b) == -1)
 		return (-1);
-	printf("pa\n");
+	write(1, "pa\n", 3);
 	return (0);
 }
 
@@ -45,6 +45,6 @@ int	pb(t_list **stack_a, t_list **stack_b)
 {
 	if (push(stack_b, stack_a) == -1)
 		return (-1);
-	printf("pb\n");
+	write(1, "pb\n", 3);
 	return (0);
 }

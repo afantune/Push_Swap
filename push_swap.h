@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:28:57 by afantune          #+#    #+#             */
-/*   Updated: 2025/01/08 13:28:34 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:36:51 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ t_list	*ft_lstnew(int value);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-void	print_list(t_list *list);
 int		ft_lstsize(t_list *lst);
 
+// Instructions
 int		swap(t_list **stack);
 int		sa(t_list **stack_a);
 int		sb(t_list **stack_b);
@@ -49,6 +49,7 @@ int		rra(t_list **stack_a);
 int		rrb(t_list **stack_b);
 int		rrr(t_list **stack_a, t_list **stack_b);
 
+// Necessary Functions
 void	ft_error(char *msg);
 void	ft_check_args(int argc, char **argv);
 int		is_sorted(t_list **stack);
@@ -57,11 +58,12 @@ void	make_top(t_list **stack, int distance);
 void	free_stack(t_list **stack);
 void	ft_free(char **str);
 void	index_stack(t_list *stack);
+long	ft_atoi(const char *str);
+int		ft_isdigit(int c);
 
+// Sorting Algorythm
 void	pivot_sort(t_list **stack_a, t_list **stack_b);
 void	radix_sort(t_list **stack_a, t_list **stack_b);
 void	three_sort(t_list **stack_a);
 void	four_five_sort(t_list **stack_a, t_list **stack_b);
-long	ft_atoi(const char *str);
-int		ft_isdigit(int c);
 #endif

@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 15:30:19 by afantune          #+#    #+#             */
-/*   Updated: 2025/01/08 13:31:53 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:39:00 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,9 @@ void	ft_check_args(int argc, char **argv)
 	i = 1;
 	args = argv;
 	if (args[i][0] == '\0')
-	{
 		ft_error("Error");
-	}
 	while (args[i])
-	{		
+	{
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
 			ft_error("Error");
