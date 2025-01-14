@@ -6,25 +6,25 @@
 #    By: afantune <afantune@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/03 12:45:09 by afantune          #+#    #+#              #
-#    Updated: 2025/01/14 12:36:40 by afantune         ###   ########.fr        #
+#    Updated: 2025/01/14 13:06:02 by afantune         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 	Swap_rules.c Push_rules.c Rotate_rules.c Reverse_rules.c sorting.c \
-	ft_lstlast.c ft_lstsize.c ft_lstadd_back.c ft_lstadd_front.c ft_lstnew.c \
-	ft_utils.c index.c ft_atoi.c check_args.c threefourfivesort.c
+NAME = push_swap
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+RM = @rm -f
+
+SRCS = swap_rules.c push_rules.c rotate_rules.c reverse_rules.c sorting.c \
+       ft_lstlast.c ft_lstsize.c ft_lstadd_back.c ft_lstadd_front.c ft_lstnew.c \
+       ft_utils.c index.c ft_atoi.c check_args.c threefourfivesort.c main.c
 
 OBJS = $(SRCS:.c=.o)
-NAME = push_swap.a
-CC = cc
-CFLAGS = -Wall -Wextra -Werror -I.
-AR = ar
-RM = @rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
