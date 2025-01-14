@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:28:57 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 14:36:15 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/08 13:28:34 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	index_stack(t_list *stack);
 void	pivot_sort(t_list **stack_a, t_list **stack_b);
 void	radix_sort(t_list **stack_a, t_list **stack_b);
 void	three_sort(t_list **stack_a);
-int		ft_atoi(const char *str);
+void	four_five_sort(t_list **stack_a, t_list **stack_b);
+long	ft_atoi(const char *str);
 int		ft_isdigit(int c);
 #endif

@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 15:12:46 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 13:23:17 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:24:32 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	index_stack(t_list *stack)
 	while (head)
 	{
 		head->index = get_index(head->value, stack);
-		//printf("head->index = %d\n", head->index);
 		head = head->next;
 	}
 }

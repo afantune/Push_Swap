@@ -6,16 +6,16 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 08:11:57 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 15:06:34 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/08 13:28:19 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	long	i;
-	int	sign;
+	int		sign;
 	long	result;
 
 	i = 0;
@@ -34,8 +34,6 @@ int	ft_atoi(const char *str)
 	{
 		result = result * 10 + str[i] - '0';
 		i ++;
-		if (result < -2147483648 || result > 2147483647)
-			ft_error("Error");
 	}
 	return (result * sign);
 }

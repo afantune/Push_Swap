@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 15:13:04 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 14:57:41 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/08 13:23:08 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_error(char *msg)
 {
-	printf("%s\n", msg);
+	while (*msg)
+		write(2, msg++, 1);
 	exit(0);
 }
 

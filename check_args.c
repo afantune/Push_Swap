@@ -6,7 +6,7 @@
 /*   By: afantune <afantune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 15:30:19 by afantune          #+#    #+#             */
-/*   Updated: 2024/12/20 14:48:28 by afantune         ###   ########.fr       */
+/*   Updated: 2025/01/08 13:31:53 by afantune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,25 @@ void	ft_check_args(int argc, char **argv)
 	char	**args;	
 
 	(void)argc;
-	/* i = 0;
-	if (argc == 2)
-		args = ft_split(argv[1], ' ');
-	else
-	{ */
 	i = 1;
 	args = argv;
-	/* } */
-	while (args[i])
+	if (args[i][0] == '\0')
 	{
+		ft_error("Error");
+	}
+	while (args[i])
+	{		
 		tmp = ft_atoi(args[i]);
 		if (!ft_isnum(args[i]))
 			ft_error("Error");
 		if (ft_contains(tmp, args, i))
 			ft_error("Error");
+		if (args[i][0] == '-' && tmp == 0)
+		{
+			ft_error("Error");
+		}
 		if (tmp < -2147483648 || tmp > 2147483647)
 			ft_error("Error");
 		i++;
 	}
-	/* if (argc == 2)
-		ft_free(args); */
 }
